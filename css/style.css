@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  color: #2563eb;
+  font-size: 42px;
+}
+
+.app-header p {
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.summary-card,
+.form-section,
+.tools-section,
+.transactions-section {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card h2 {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.balance-card p {
+  color: #2563eb;
+}
+
+#income {
+  color: #16a34a;
+}
+
+#expenses {
+  color: #dc2626;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h2,
+.transactions-section h2 {
+  margin-bottom: 15px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.tools-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tools-section input {
+  flex: 1;
+}
+
+.transactions-section ul {
+  list-style: none;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction-info strong {
+  display: block;
+}
+
+.transaction-info small {
+  color: #6b7280;
+}
+
+.income {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.expense {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    color: #dc2626;
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .summary-section {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-section {
+    flex-direction: column;
+  }
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.summary-card:hover,
+.form-section:hover,
+.tools-section:hover,
+.transactions-section:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+button,
+.delete-btn {
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .summary-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .app-header h1 {
+    font-size: 34px;
+  }
+
+  .summary-section {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-section {
+    flex-direction: column;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #6b7280;
+    font-size: 18px;
+    list-style: none;
+}

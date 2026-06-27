@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTrack | Personal Finance Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <h1>FinTrack</h1>
+      <p>Track your income, expenses, and balance in one place.</p>
+    </header>
+
+    <section class="summary-section">
+      <div class="summary-card balance-card">
+        <h2>Balance</h2>
+        <p id="balance">$0.00</p>
+      </div>
+
+      <div class="summary-card">
+        <h2>Income</h2>
+        <p id="income">$0.00</p>
+      </div>
+
+      <div class="summary-card">
+        <h2>Expenses</h2>
+        <p id="expenses">$0.00</p>
+      </div>
+
+      <div class="summary-card">
+        <h2>Total Transactions</h2>
+        <p id="total-transactions">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h2>Income Entries</h2>
+        <p id="income-count">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h2>Expense Entries</h2>
+        <p id="expense-count">0</p>
+      </div>
+      </section>
+
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+
+      <form id="transaction-form">
+        <input type="text" id="title" placeholder="Transaction title" required />
+
+        <input type="number" id="amount" placeholder="Amount" required />
+
+        <select id="type" required>
+          <option value="">Select type</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option value="Salary">Salary</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Bills">Bills</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="date" id="date" required />
+
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="tools-section">
+      <input type="text" id="search" placeholder="Search transactions..." />
+
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <select id="sort">
+        <option value="newest-added">Newest Added</option>
+        <option value="oldest-added">Oldest Added</option>
+        <option value="highest">Highest Amount</option>
+        <option value="lowest">Lowest Amount</option>
+        <option value="date-newest">Latest Transaction Date</option>
+        <option value="date-oldest">Earliest Transaction Date</option>
+      </select>
+    </section>
+
+    <section class="transactions-section">
+      <h2>Transactions</h2>
+      <ul id="transaction-list"></ul>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
