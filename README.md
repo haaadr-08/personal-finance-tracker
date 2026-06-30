@@ -33,11 +33,11 @@ FinTrack is a responsive personal finance web application that allows users to m
 
 ### Home Page
 
-*(Add your first screenshot here)*
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/3d2c20da-dfe8-4d75-89ad-37ad2311b574" />
 
-### Transaction List
+### Transaction Dashboard
 
-*(Add your second screenshot here)*
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/5a57c32c-659c-4e83-a24f-4bf77486ce85" />
 
 ## 🚀 Live Demo
 
